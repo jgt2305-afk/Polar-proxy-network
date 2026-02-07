@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polar Browser - Next Level Proxy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Browser Container -->
+    <div class="browser-container">
+        <!-- Top Navigation Bar -->
+        <div class="browser-header">
+            <div class="browser-controls">
+                <button class="control-btn" id="backBtn" title="Back">◀</button>
+                <button class="control-btn" id="forwardBtn" title="Forward">▶</button>
+                <button class="control-btn" id="refreshBtn" title="Refresh">⟳</button>
+                <button class="control-btn" id="homeBtn" title="Home">🏠</button>
+            </div>
+
+            <div class="address-bar">
+                <span class="secure-icon">🔒</span>
+                <input type="text" id="urlInput" placeholder="Search or enter web address..." />
+                <button class="search-btn" id="searchBtn">Go</button>
+            </div>
+
+            <div class="browser-actions">
+                <button class="action-btn" id="newTabBtn" title="New Tab">+</button>
+                <button class="action-btn" id="settingsBtn" title="Settings">⚙️</button>
+            </div>
+        </div>
+
+        <!-- Tab Bar -->
+        <div class="tab-bar" id="tabBar">
+            <div class="browser-tab active" data-tab-id="0">
+                <span class="tab-icon">🏠</span>
+                <span class="tab-title">Front Page</span>
+                <button class="tab-close">×</button>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Sidebar -->
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-header">
+                    <div class="logo">
+                        <span class="logo-icon">❄️</span>
+                        <span class="neon-text">POLAR</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="section-title">NAVIGATION</div>
+                    <button class="sidebar-btn active" data-page="frontpage">
+                        <span class="sidebar-icon">🏠</span>
+                        <span>Front Page</span>
+                    </button>
+                    <button class="sidebar-btn" data-page="games">
+                        <span class="sidebar-icon">🎮</span>
+                        <span>Games</span>
+                    </button>
+                    <button class="sidebar-btn" data-page="movies">
+                        <span class="sidebar-icon">🎬</span>
+                        <span>Movies</span>
+                    </button>
+                    <button class="sidebar-btn" data-page="apps">
+                        <span class="sidebar-icon">📱</span>
+                        <span>Apps</span>
+                    </button>
+                    <button class="sidebar-btn" data-page="partners">
+                        <span class="sidebar-icon">🤝</span>
+                        <span>Partners</span>
+                    </button>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="section-title">QUICK APPS</div>
+                    <button class="sidebar-btn" data-app="youtube">
+                        <span class="sidebar-icon">▶️</span>
+                        <span>YouTube</span>
+                    </button>
+                    <button class="sidebar-btn" data-app="github">
+                        <span class="sidebar-icon">🐙</span>
+                        <span>GitHub</span>
+                    </button>
+                    <button class="sidebar-btn" data-app="discord">
+                        <span class="sidebar-icon">💬</span>
+                        <span>Discord</span>
+                    </button>
+                    <button class="sidebar-btn" data-app="reddit">
+                        <span class="sidebar-icon">🤖</span>
+                        <span>Reddit</span>
+                    </button>
+                    <button class="sidebar-btn" data-app="spotify">
+                        <span class="sidebar-icon">🎵</span>
+                        <span>Spotify</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="content-area" id="contentArea">
+                <!-- Tab Content Container -->
+                <div class="tab-content-container" id="tabContent0" data-tab-id="0">
+                    <!-- Front Page -->
+                    <div class="page-content" id="frontpage">
+                        <div class="welcome-container">
+                            <h1 class="neon-title">❄️ POLAR BROWSER</h1>
+                            <p class="subtitle">Your Gateway to the Unrestricted Web</p>
+
+                            <div class="search-widget">
+                                <input type="text" id="mainSearch" placeholder="Search the web or enter URL..." />
+                                <button id="mainSearchBtn">Search</button>
+                            </div>
+
+                            <div class="suggested-apps">
+                                <h2>Quick Access Apps</h2>
+                                <div class="app-grid">
+                                    <div class="app-tile" data-url="https://www.youtube.com">
+                                        <div class="app-tile-icon">▶️</div>
+                                        <div class="app-tile-name">YouTube</div>
+                                    </div>
+                                    <div class="app-tile" data-url="https://github.com">
+                                        <div class="app-tile-icon">🐙</div>
+                                        <div class="app-tile-name">GitHub</div>
+                                    </div>
+                                    <div class="app-tile" data-url="https://discord.com">
+                                        <div class="app-tile-icon">💬</div>
+                                        <div class="app-tile-name">Discord</div>
+                                    </div>
+                                    <div class="app-tile" data-url="https://reddit.com">
+                                        <div class="app-tile-icon">🤖</div>
+                                        <div class="app-tile-name">Reddit</div>
+                                    </div>
+                                    <div class="app-tile" data-url="https://open.spotify.com">
+                                        <div class="app-tile-icon">🎵</div>
+                                        <div class="app-tile-name">Spotify</div>
+                                    </div>
+                                    <div class="app-tile" data-url="https://twitter.com">
+                                        <div class="app-tile-icon">🐦</div>
+                                        <div class="app-tile-name">Twitter</div>
+                                    </div>
+                                    <div class="app-tile" data-url="https://www.netflix.com">
+                                        <div class="app-tile-icon">🎥</div>
+                                        <div class="app-tile-name">Netflix</div>
+                                    </div>
+                                    <div class="app-tile" data-url="https://www.twitch.tv">
+                                        <div class="app-tile-icon">📺</div>
+                                        <div class="app-tile-name">Twitch</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Games Page -->
+                    <div class="page-content hidden" id="games">
+                        <div class="page-header">
+                            <h1>🎮 Games Library</h1>
+                            <p>Browse and play games directly in your browser</p>
+                        </div>
+                        <div class="search-filter">
+                            <input type="text" id="gameSearch" placeholder="Search games..." />
+                        </div>
+                        <div id="gamesList" class="content-grid"></div>
+                    </div>
+
+                    <!-- Movies Page -->
+                    <div class="page-content hidden" id="movies">
+                        <div class="page-header">
+                            <h1>🎬 Movies Library</h1>
+                            <p>Watch movies and shows directly in your browser</p>
+                        </div>
+                        <div class="search-filter">
+                            <input type="text" id="movieSearch" placeholder="Search movies..." />
+                        </div>
+                        <div id="moviesList" class="content-grid"></div>
+                    </div>
+
+                    <!-- Apps Page -->
+                    <div class="page-content hidden" id="apps">
+                        <div class="page-header">
+                            <h1>📱 Web Apps</h1>
+                            <p>Access popular web applications</p>
+                        </div>
+                        <div id="appsList" class="content-grid"></div>
+                    </div>
+
+                    <!-- Partners Page -->
+                    <div class="page-content hidden" id="partners">
+                        <div class="page-header">
+                            <h1>🤝 Partners</h1>
+                            <p>Explore our partner sites and services</p>
+                        </div>
+                        <div id="partnersList" class="content-grid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+        <span id="status">Ready</span>
+        <span id="tabCount">1 tab</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
